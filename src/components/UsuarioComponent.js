@@ -1,9 +1,6 @@
-import React,{useState, useCallback} from "react";
+import React,{useState} from "react";
 import {TarjetaComponent} from "./TarjetaComponent";
 import {FormularioComponent} from "./FormularioComponent";
-import {useNavigate} from 'react-router-dom'
-
-
 
 const initialUsuarios =[
     {
@@ -23,7 +20,6 @@ const initialUsuarios =[
     }
 ]
 
-
 const UsuarioComponent = () => {
 
     const [usuarios, setUsuarios] = useState(initialUsuarios);
@@ -32,15 +28,12 @@ const UsuarioComponent = () => {
     state[1]= funcion que nos permite hacer cambios */}
     const [usuarioEditado, setUsuarioEditado]= useState(null);
 
-    const navigate = useNavigate();
-
-    const handleOnClick = useCallback(()=> navigate('/autos', {replace:true}, [navigate]));
-
+    
     const tarjetaDelete =(usuarioKey)=>{
         const changeUsuarios = usuarios.filter(u => u.key !== usuarioKey)
         setUsuarios(changeUsuarios)
     }
-    const usuarioAdd =(usuario)=>{
+    const usuarioAdd =(usuario)=>{  //agregar tarea {en este caso est{a agregando un usuario}
         const addUsuarios = [
             ...usuarios,
             usuario
@@ -78,9 +71,6 @@ const UsuarioComponent = () => {
         
       </div>
         <br/>
-        <div>
-      <button type="buttom" className="btn btn-outline-primary me-2" onClick={handleOnClick}>No agregar este boton</button>
-      </div>
     </div>
   </div>
   );
