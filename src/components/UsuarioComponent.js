@@ -50,7 +50,7 @@ const UsuarioComponent = () => {
     <div className="container mt-4">
     <div className="row">
       <div className="col-8 ">
-        <h1>Tareas</h1>
+        <h1></h1> {/*Salía tareas de titulo y despues las tareas agregadas*/}
         {
             usuarios.map(u =>
                 <TarjetaComponent 

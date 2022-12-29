@@ -49,7 +49,7 @@ const FormularioComponent = ({usuarioAdd, usuarioEditado, usuarioEdit, setUsuari
 
     return(
     <form onSubmit={handleSubmit}>
-      <h1>{usuarioEditado ? '':'Crear Usuario'}</h1>
+      <h1>{usuarioEditado ? '':''}</h1>
       {/*usuarioEditado es nulo? si no muestra 'Editar usuario', si es nulo muestra 'Ingresar Usuario' */}
         <div className="form-group">
           <label></label> {/**en este input se agrega la tarea, tiene el valor de nombre */ }
