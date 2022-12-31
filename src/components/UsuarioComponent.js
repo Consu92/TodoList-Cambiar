@@ -48,7 +48,17 @@ const UsuarioComponent = () => {
 
     return(
     <div className="container mt-4">
-    <div className="row">
+    <div className="">
+      
+    <div className="col">
+        <h1>To do list</h1>  {/*Formulario crear usuario o editar* */}
+        <FormularioComponent 
+        usuarioAdd={usuarioAdd} 
+        usuarioEditado={usuarioEditado}
+        usuarioEdit={usuarioEdit}
+        setUsuarioEditado={setUsuarioEditado}/>
+        
+      </div>
       <div className="col-8 ">
         <h1></h1> {/*Salía tareas de titulo y despues las tareas agregadas*/}
         {
@@ -59,15 +69,6 @@ const UsuarioComponent = () => {
                 tarjetaDelete={tarjetaDelete}
                 setUsuarioEditado={setUsuarioEditado}/>)
         }
-        
-      </div>
-      <div className="col">
-        <h1>To do list</h1>  {/*Formulario crear usuario o editar* */}
-        <FormularioComponent 
-        usuarioAdd={usuarioAdd} 
-        usuarioEditado={usuarioEditado}
-        usuarioEdit={usuarioEdit}
-        setUsuarioEditado={setUsuarioEditado}/>
         
       </div>
         <br/>
