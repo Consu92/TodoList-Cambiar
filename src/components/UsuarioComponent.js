@@ -1,22 +1,13 @@
 import React,{useState} from "react";
 import {TarjetaComponent} from "./TarjetaComponent";
 import {FormularioComponent} from "./FormularioComponent";
+import "./elementos.css";
+
 
 const initialUsuarios =[
     {
-        key:0,
-        nombre: 'Comer manzana'  //
-    },
-    {
-        key:1,
-        nombre: 'Leer libro'  //
-
-    },
-    {
-        key:2,
-        nombre: 'Tomar apuntes' //
-       
-        
+        key:'',
+        nombre: ''  //
     }
 ]
 
@@ -51,7 +42,7 @@ const UsuarioComponent = () => {
     <div className="">
       
     <div className="col">
-        <h1>To do list</h1>  {/*Formulario crear usuario o editar* */}
+        <h1 className="titulo">To do list</h1>  {/*Formulario crear usuario o editar* */}
         <FormularioComponent 
         usuarioAdd={usuarioAdd} 
         usuarioEditado={usuarioEditado}
@@ -68,8 +59,9 @@ const UsuarioComponent = () => {
                 usuario={u} 
                 tarjetaDelete={tarjetaDelete}
                 setUsuarioEditado={setUsuarioEditado}/>)
+                
         }
-        
+       
       </div>
         <br/>
     </div>

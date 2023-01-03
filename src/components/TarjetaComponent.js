@@ -1,4 +1,5 @@
 import React from "react";
+import "./elementos.css";
 
 const TarjetaComponent = ({usuario, tarjetaDelete, setUsuarioEditado}) => { {/** TarjetaTareaCreadaComponent*/}
     return(
@@ -6,12 +7,15 @@ const TarjetaComponent = ({usuario, tarjetaDelete, setUsuarioEditado}) => { {/**
     <div className = "card-body">
       <h3 className="card-title">{usuario.nombre}</h3> {/**hay que cambiarla porque es la tarea agregada */}
       <hr/>
-      <div className="d-flex justify-content-end">
-        <button className="btn btn-sm btn-outline-primary me-2" onClick={()=>setUsuarioEditado(usuario)}>Editar tarea</button> {/**aqui hay que agregar el icono */}
-        <button className="btn btn-sm btn-outline-danger" onClick={() => tarjetaDelete(usuario.key)}>Eliminar tarea</button>
+      <div className="container-iconos d-flex justify-content-end"> {/**contenedor de los botones editar y eliminar de la tarea */}
+        <i className="icono-editar bi bi-pencil" onClick={()=>setUsuarioEditado(usuario)}></i>
+        <i className="icono-eliminar bi bi-trash3" onClick={() => tarjetaDelete(usuario.key)}></i>
       </div>
     </div>
   </div>)
+
 }
 
 export {TarjetaComponent};
+
+

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 
 const initialValues =[
   {
-   
     nombre:''
   }
 ]
@@ -62,7 +61,7 @@ const FormularioComponent = ({usuarioAdd, usuarioEditado, usuarioEdit, setUsuari
           name='nombre'
           onChange={handleInputChange}
           />
-          <br/>
+          <br/>      
         </div>
         <div>
           <button type="submit" className="btn btn-outline-primary me-2">{usuarioEditado ? 'Editar':'Agregar'}</button> {/*el boton cambia de crear a editar*/}
