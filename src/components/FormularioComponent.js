@@ -64,9 +64,9 @@ const FormularioComponent = ({usuarioAdd, usuarioEditado, usuarioEdit, setUsuari
           <br/>      
         </div>
         <div>
-          <button type="submit" className="btn btn-outline-primary me-2">{usuarioEditado ? 'Editar':'Agregar'}</button> {/*el boton cambia de crear a editar*/}
+          <button type="submit" className="boton-editar-agregar  me-2"><span className="span-editar-agregar"></span>{usuarioEditado ? 'Editar':'Agregar'}</button> {/*el boton cambia de crear a editar*/}
           {usuarioEditado ? 
-          (<button type="button" className="btn btn-outline-warning" onClick={()=>{setUsuarioEditado(null)}}>Cancelar</button>):''}
+          (<button type="button" className="boton-cancelar " onClick={()=>{setUsuarioEditado(null)}}><span className="span-cancelar"></span>Cancelar</button>):''}
           
         </div>
         

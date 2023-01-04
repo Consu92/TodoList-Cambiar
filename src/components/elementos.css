@@ -1,5 +1,5 @@
 .container{
-    background-color: black;
+    background-color: #12343b;
 }
 
 .titulo{
@@ -10,4 +10,75 @@
 .icono-editar{
     margin-right: 15px;
 }
+
+{/*Boton-editar-agregar, modifica ambos*/}
+
+.boton-editar-agregar{
+    font-size: small;
+    border-radius:5px;
+    border-color: #572975;
+    background: #572975;
+    color: rgba(255, 255, 255, .4);
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.span-editar-agregar{
+
+    position: absolute;
+    width: -50%;
+    height: -50px;
+    border-radius: 50%;
+    background: rgba(38, 184, 221, .2);
+    left: -100%;
+    transition: .3s;
+}
+
+button:hover span{    left: -10%;
+}
+
+button:hover{
+    color: #c0e4da;
+    background: #340856;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .7);
+}
+
+{/*Boton-cancelar*/}
+
+.boton-cancelar{
+    font-size: small;
+    border-radius:5px;
+    border-color: #572975;
+    background: #572975;
+    color: rgba(255, 255, 255, .4);
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+
+}
+
+.span-cencelar{
+
+    position: absolute;
+    width: -50%;
+    height: -50px;
+    border-radius: 50%;
+    background: rgba(38, 184, 221, .2);
+    left: -100%;
+    transition: .3s;
+}
+
+button:hover span{
+    left: -10%;
+}
+
+button:hover{
+    color: #c0e4da;
+    background: #340856;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .7);
+}
+
+
+
 
